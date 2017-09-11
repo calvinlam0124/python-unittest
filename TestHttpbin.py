@@ -26,4 +26,4 @@ class TestHttpbin(unittest.TestCase):
         string = response.read().decode('utf-8')
         json_obj = json.loads(string)
 
-        self.assertEqual("urllib.3", json_obj["args"]["params3"])
+        self.assertEqual( data['params3'] , json_obj["args"]["params3"])
